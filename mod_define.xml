@@ -7,8 +7,9 @@
 		<name>string</name>							<!-- Module name -->
 		<version>float</version>					<!-- Version number of this module -->
 		<component>boolean</component>				<!-- Is this module a component? If so, it can be used in other modules -->
+		<driver>string</driver>						<!-- The type of LED Driver chip being used on this module. Optional, but required for driver modules -->
 	</properties>
-	
+
 	<rectangle>
 		<line_color>rgb</line_color>				<!-- Color of the line drawing -->
 		<fill_color>rgb</fill_color>				<!-- Default color of fill -->
@@ -19,12 +20,12 @@
 		<height>integer</height>					<!-- Height of Rectangle -->
 		<level>integer</level>						<!-- What z-level is this item in the module? -->
 	</rectangle>
-	
+
 	<polygon>
 		<line_color>rgb</line_color>				<!-- Color of the line drawing -->
 		<fill_color>rgb</fill_color>				<!-- Default color of fill -->
 		<fill_on_color>rgb</fill_on_color>			<!-- Color used only if this is an LED, and it is on -->
-					<led>boolean</led>							<!-- Is this an LED? -->
+		<led>boolean</led>							<!-- Is this an LED? -->
 		<point>										<!-- Define a point in the polygon drawing-->
 			<point_number>integer</point_number>	<!-- What sequential point, starting at 0, is this one? -->
 			<point_x>integer</point_x>				<!-- x-value of this point -->
@@ -42,7 +43,7 @@
 		</point>
 		<level>integer</level>						<!-- What z-level is this item in the module? -->
 	</polygon>
-	
+
 	<circle>
 		<line_color>rgb</line_color>				<!-- Color of the line drawing -->
 		<fill_color>rgb</fill_color>				<!-- Default color of fill -->
@@ -57,12 +58,11 @@
 		<name>string</name>							<!-- The name of this connection. Program should provide default -->
 		<point_x>integer</point_x>					<!-- x-value of point where this connection exists -->
 		<point_y>integer</point_y>					<!-- y-value of point where this connection exists -->
-		<></>
 	</connection>
-	
+
 	<wire>
-	
-	
+
+
 	</wire>
-	
+
 </moduledef>

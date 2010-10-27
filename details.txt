@@ -1,0 +1,24 @@
+
+BlazeShow
+
+The main point of this software is to generate code for animation effects with LEDs. Suggested code outputs include:
+- C code for AVR using TLC5940
+- C code for PIC using TLC5940
+- Processing code for Arduino using TLC5940
+
+
+Users should be able to define a module as a component to be used in other modules. This includes things like commercial connectors, headers, LEDs 
+(5mm, 3mm, rectangle, etc). They should also be able to define how these components are connected together.
+
+
+When a module is defined to be an LED, it's fill_on_color property will be present. If using the TLC5940, or other similar drivers with grayscale
+capability, use variations from fill_color to fill_on_color. fill_on_color should always be a primary color to ensure proper emulation of grayscale colors.
+
+User should be able to create a single animation, multiple animations or small loops, or a sequential animation
+A sequential animation involved the user selecting one or more LEDs in the project, and then performing one of a variety of actions
+Either turning on and off each led in sequence, turning on each led in sequence, etc
+
+If a module is an LED, it should have two or more [connection] points. If more than two connection points, it should also have wires as needed.
+
+
+How to deal with RGB LEDs? Semi-recursive modules? How difficult is this? How many layers of modules can I allow, and how much complexity will this add?

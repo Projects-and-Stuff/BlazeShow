@@ -23,5 +23,26 @@ If a module is an LED, it should have two or more [connection] points. If more t
 
 Modules and Projects are saved as XML files. module.xsd is the schema definition for modules, and project.xsd is the schema definition for project files.
 
+Some information about the tools and resources used in this project:
+
+Programming Language: 		C++
+IDE and Framework used: 	Trolltech Qt Open Source version 4.7.0
+							http://qt.nokia.com/products/
+File Editor					Notepad++
+							http://notepad-plus-plus.org/
+Open Source Icon source:	Open Icon Library
+							http://openiconlibrary.sourceforge.net/
+XML Schema Documenter		xnsdoc (Open Source License)
+							http://buldocs.com/xnsdoc/
+GIT Tools					GitHub
+							http://github.com/
+							TortoiseGit
+							http://code.google.com/p/tortoisegit/downloads/list
+							msysgit
+							http://code.google.com/p/msysgit/downloads/list
+							Sparkfun Windows GitHub tutorial
+							http://sparkfun.com/commerce/tutorial_info.php?tutorials_id=165
+
+							
 Questions:
 How to deal with RGB LEDs? Semi-recursive modules? How difficult is this? How many layers of modules can I allow, and how much complexity will this add?

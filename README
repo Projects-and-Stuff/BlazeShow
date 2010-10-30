@@ -2,18 +2,26 @@ README
 
 BlazeShow Version 0
 
+(NOTE: Will start organizing these random notes better within the next couple git pushes. Plan to start documentation in parallel with Editor development)
+
 =========================================================================
 
-The main point of this software is to generate code for animation effects with LEDs. Suggested code outputs include:
-- C code for AVR using TLC5940
-- C code for PIC using TLC5940
-- Processing code for Arduino using TLC5940
+The project involves modular LED boards using either the TLC5940 LED current-sink chip, or similar chips. These chips use serial data to drive LEDs, and offer features like PWM and grayscale for each LED.
 
-The project involves modular LED boards using either the TLC5940 LED driver chip, or similar chips. These chips use serial data to drive LEDs, and offer features like PWM and grayscale for each LED.
 
-Modules are generally a printed circuit board with an LED driver, connectors, and LEDs (though it might only contain headers for external LEDs). Modules can be daisy-chained to allow for large displays of many LEDs.
+The main point of the Editor software is to generate code for animation effects with LEDs. Suggested code outputs include:
+- C code for AVR using TLC5940/5941/5944/5945 (16 output) or TLC5947/4951/4952 (24 output)
+- C code for PIC using TLC5940/5941/5944/5945 (16 output) or TLC5947/4951/4952 (24 output)
+- Processing code for Arduino using TLC5940/5941/5944/5945 (16 output) or TLC5947/4951/4952 (24 output)
 
-Users will be able to draw and use modules. Users should also be able to draw and define a module as a component to be used in other modules. This includes things like commercial connectors, headers, LEDs (5mm, 3mm, rectangle, etc). They should also be able to define how these components are connected together.
+http://focus.ti.com/docs/prod/folders/print/tlc5940.html
+http://focus.ti.com/docs/prod/folders/print/tlc5947.html
+
+BlazeShow Editor uses C++ and Qt 4.7, and will be freely available for Windows, Linux, and Mac OS X.
+
+Modules generally consist of a printed circuit board with an LED driver, connectors, and LEDs (though it might only contain headers for external LEDs). Modules can be daisy-chained to allow for large displays of many LEDs.
+
+Users will be able to draw and use modules in BlazeShow Editor. Users should also be able to draw and define a module as a component to be used in other modules. This includes things like commercial connectors, headers, LEDs (5mm, 3mm, rectangle, etc). They should also be able to define how these components are connected together.
 
 When a module is defined to be an LED, it's fill_on_color property will be present (see mod_define.xml for initial design specs). If using the TLC5940, or other similar drivers with grayscale capability, use variations from fill_color to fill_on_color. fill_on_color should always be a primary color to ensure proper emulation of grayscaled colors.
 
@@ -46,3 +54,4 @@ GIT Tools					GitHub
 							
 Questions:
 How to deal with RGB LEDs? Semi-recursive modules? How difficult is this? How many layers of modules can I allow, and how much complexity will this add?
+For RGB LEDs, it should be a single component module with up to 3 inputs and 3 outputs, depending on common anode or all individual wires. Use the characteristics of the RGB LED to determine the resulting color as adjustments are made.
